@@ -11,13 +11,13 @@ $token = trim(fgets(STDIN));
         echo "\n".color("green","  ⏳︄▶️ Please Wait...  ");
         for($a=1;$a<=3;$a++){
         echo color("green","tunggu");
-        sleep(3);
+        sleep(10);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, '  Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","  Message: ".$message);
-        sleep(3);
+        sleep(10);
         goto gofood;
         }else{
         echo "\n".color("red","  Message: ".$message);
@@ -26,7 +26,7 @@ $token = trim(fgets(STDIN));
         echo "\n".color("green","  ⏳︄▶️ Please Wait...  ");
         for($a=1;$a<=3;$a++){
         echo color("green","tunggu");
-        sleep(3);
+        sleep(10);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -35,7 +35,7 @@ $token = trim(fgets(STDIN));
         echo "\n".color("green","  ⏳︄▶️ Please Wait...  ");
         for($a=1;$a<=3;$a++){
         echo color("green","tunggu");
-        sleep(3);
+        sleep(10);
         }
         sleep(3);
         $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"MAKANGOFOOD2107"}');
